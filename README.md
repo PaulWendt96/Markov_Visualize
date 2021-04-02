@@ -7,7 +7,7 @@ Create Markov Chain visualizations similar to what is shown below.
 ```bash
 git clone https://www.github.com/PaulWendt96/Markov_Visualize
 ```
-Beyond the installation above, Markov_Visualize also relies on the [DOT](https://graphviz.org/download/) and [ffmpeg](https://ffmpeg.org/download.html) programs. You will need to install these programs and add them to your PATH in order for Markov_Visualize to work correctly.
+Markov_Visualize also relies on the [DOT](https://graphviz.org/download/) and [ffmpeg](https://ffmpeg.org/download.html) programs. You will need to install these programs and add them to your PATH in order for Markov_Visualize to work correctly.
 
 ## Usage
 Create a Markov model using markov.py, then call make_gif to make GIF.
