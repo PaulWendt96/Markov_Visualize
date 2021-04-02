@@ -1,5 +1,5 @@
 # Markov_Visualize
-Create Markov Chain visualizations similar to what is shown below.
+Create Markov Chain visualizations similar to what is shown below. This project takes a significant amount of inspiration from [GraphvizAnim](https://github.com/mapio/GraphvizAnim)
 
 <img src=reincarnation.gif alt=Markov GIF/>
 
