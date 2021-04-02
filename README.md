@@ -1,5 +1,5 @@
 # Markov_Visualize
-Create Markov Chain visualizations similar to what is shown below:
+Create Markov Chain visualizations similar to what is shown below.
 
 <img src=giffy.gif alt=Markov GIF/>
 
