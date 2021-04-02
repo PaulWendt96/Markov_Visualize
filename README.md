@@ -16,13 +16,13 @@ Create a Markov model using markov.py, then call make_gif to make GIF.
 from markov import State, MarkovModel, make_gif
 
 # create the markov model
-s1 = State('Active', None)
-s2 = State('Disabled', None)
-s3 = State('Dead', None)
-s4 = State('Dirt', None)
-s5 = State('Plant', None)
-s6 = State('Cheetah', None)
-s7 = State('Man', None)
+s1 = State('Active')
+s2 = State('Disabled')
+s3 = State('Dead')
+s4 = State('Dirt')
+s5 = State('Plant')
+s6 = State('Cheetah')
+s7 = State('Man')
 s1.add_transitions_from_prob([(s2, .5), (s3, .02)])
 s2.add_transitions_from_prob([(s1, .5), (s3, .03)])
 s3.add_transitions_from_prob([(s4, .8), (s5, .07), (s6, .10), (s7, .02)])
