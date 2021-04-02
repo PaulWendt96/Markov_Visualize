@@ -52,4 +52,4 @@ The current markov.py does not allow Markov Chains to have explicit transitions 
 It is currently difficult to change transitions in the model while it is running. This is because ```make_gif``` makes a copy of the ```MarkovModel``` object before it starts iterating. Copying the provided markov model before turning it into a GIF ensures that the original model is not iterated over without the author explicitly telling it to iterate. There is, however, nothing stopping you from commenting out this copying if you wish to change the model animations dynamically while it is running.
 
 ## How do I contribute?
-Pull requests are welcome. Feel free to message me if you know if any way to create higher-quality GIFs as well. The current GIFs work for my purposes, but do not look extremely polished.
+Pull requests are welcome. This is one of my first repositories (and one of my first times using git), so please let me know if there is anything I could include that might be useful in this repository or in future repositories. 
