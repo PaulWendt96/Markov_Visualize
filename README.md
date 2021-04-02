@@ -44,7 +44,7 @@ Add animations to a markov model by changing ```markov.MarkovModel.model_actions
 
 Despite their conceptual simplicity, Markov Models have an enormous variety of real world purposes. Financial models, for example, often rely heavily on [regime switching](https://quant.stackexchange.com/questions/30139/what-is-a-regime-switch) models that model expected asset returns differently based on different states of the economy. Health insurers use markov models to help set premiums by stochastically determine how often policyholders are active or disabled. You can even use markov chains to generate [reasonably good sentences](https://www.kdnuggets.com/2019/11/markov-chains-train-text-generation.html) given a corpus of text to train on. The resulting sentences make syntactic sense, and are similar to what you might expected a rudimentary RNN to produce. 
 
-## What are the currently known limitations of Markov_Visualize?
+## What are the primary limitations of Markov_Visualize?
 This tool should be used primarily for visualizations. If you're serious about performance, you should consider implementing Markov chains using tools like Numpy. 
 
 The current markov.py does not allow Markov Chains to have explicit transitions to themselves (this probability is calculated implicitly). This prevents nodes from having an arrow to itself in GIFs. See [GraphvizAnim](https://github.com/mapio/GraphvizAnim) if you'd like to make GIFs with nodes that point to themselves.
