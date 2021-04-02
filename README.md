@@ -37,7 +37,7 @@ markov = MarkovModel(states=states, start_state=s1)
 make_gif(markov, basename='giffy', state_changes_per_second=2, states=200)
 ```
 
-Note that this tool should be used primarily for visualizations. If you're serious about performance, you should consider implementing Markov chains using tools like Numpy. 
+This tool should be used primarily for visualizations. If you're serious about performance, you should consider implementing Markov chains using tools like Numpy. 
 
 ## Description
 [Markov chains](https://simple.wikipedia.org/wiki/Markov_chain#:~:text=A%20Markov%20chain%20is%20a,right%20now%20(the%20state).&text=Markov%20chains%20can%20be%20discrete%20or%20continuous.) are stochastic models that connect a series of possible future events with directed transitions. Markov chains are essentially graphs consisting of nodes and directed edges. Each node represents a different state that the Markov chain can be in. Each directed edge represents a potential movement from the current state **state<sub>i</sub>** to the next state **state<sub>i + 1</sub>**. Markov Chains move states base on conditional probability, in which the conditional probability represents the probability that a given directed edge in the graph is taken. Markov Chains are stochastic models, which means that they move randomly based on probabilities. As a result, every call to ```pythonmake_gif(markov, basename, state_changes_per_second, states)``` will likely result in a slightly different GIF. 
