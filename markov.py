@@ -301,7 +301,7 @@ def save_file_gv(markov_graph, size=320): # size isn't in the right place, but i
     return f
 
 
-def make_gif(markov_graph, basename='giffy', state_changes_per_second=10, states=100):
+def make_gif(markov_graph, basename='giffy', state_changes_per_second=1, iterations=100):
     '''
     create GIF from underlying markov graph. file names are padded in order to
     satisfy ffmpeg formatting. see:
@@ -311,17 +311,19 @@ def make_gif(markov_graph, basename='giffy', state_changes_per_second=10, states
     do note that the underlying markov_graph is copied in order to perform the animations.
     '''
     tempdir_name = 'sampledir' # TODO: need better naming heuristic
-    padding = int(log(states, 10)) + 1
+    delay = (1/state_changes_per_second)*100
+    padding = int(log(iterations, 10)) + 1
     with make_temporary_directory(os.getcwd(), tempdir_name, remove_if_already_exists=False) as path:
         graph_saver = save_file_gv(deepcopy(markov_graph))
         file_paths = []
-        for i, _ in enumerate(range(states)):
+        for i, _ in enumerate(range(iterations)):
             iteration = i + 1
             file_name = '{}{}.png'.format(''.join(['0' for _ in range(padding - int(log(iteration, 10)) - 1)]), iteration)
             file_paths.append(file_name)
             graph_saver(os.path.join(path, file_name))
 
-        command = 'ffmpeg -r {} -i {}%0{}d.png -vf scale=860:1000 {}'.format(state_changes_per_second, tempdir_name + '\\', padding, basename + '.gif')
+        #command = 'ffmpeg -r {} -i {}%0{}d.png -vf scale=860:1000 {}'.format(state_changes_per_second, tempdir_name + '\\', padding, basename + '.gif')
+        command = 'magick -delay {} {} {}'.format(delay, tempdir_name + '\\' + '*.png', basename + '.gif')
         run(command)
 
 
