@@ -7,7 +7,7 @@ Create Markov Chain visualizations similar to what is shown below. This project 
 ```bash
 git clone https://www.github.com/PaulWendt96/Markov_Visualize
 ```
-To make a GIF, Markov_Visualize produces a number of PNG images from a given MarkovModel. It then uses these PNG images to create a GIF using ffmpeg and magick. All images are stored in a temporary directory, which is created when the script begins and removed when the script is finished. Markov_Visualize relies on the [DOT](https://graphviz.org/download/) and [magick](https://imagemagick.org/script/download.php) programs to create GIFs. You will need to install these programs and add them to your PATH in order for Markov_Visualize to work correctly.
+To make a GIF, Markov_Visualize produces a number of PNG images from a given MarkovModel. It then uses these PNG images to create a GIF using ffmpeg and magick. All PNG images are stored in a temporary directory, which is created when the script begins and removed when the script is finished. Markov_Visualize relies on the [DOT](https://graphviz.org/download/) and [magick](https://imagemagick.org/script/download.php) programs to create GIFs. You will need to install these programs and add them to your PATH in order for Markov_Visualize to work correctly.
 
 ## How do I use Markov_Visualize?
 Create a Markov model using markov.py, then call make_gif to make GIF.
