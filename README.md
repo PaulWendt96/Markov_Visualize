@@ -14,6 +14,7 @@ Create a Markov model using markov.py, then call make_gif to make GIF.
 
 ```python
 from markov import State, MarkovModel, make_gif
+
 # create the markov model
 s1 = State('Active', None)
 s2 = State('Disabled', None)
