@@ -1,7 +1,7 @@
 # Markov_Visualize
 Create Markov Chain visualizations similar to what is shown below.
 
-<img src=giffy.gif alt=Markov GIF/>
+<img src=reincarnation.gif alt=Markov GIF/>
 
 ## Installation
 ```bash
@@ -34,7 +34,7 @@ states = [s1, s2, s3, s4, s5, s6, s7]
 markov = MarkovModel(states=states, start_state=s1)
 
 # turn model into GIF
-make_gif(markov, basename='giffy', state_changes_per_second=2, iterations=200)
+make_gif(markov, basename='reincarnation', state_changes_per_second=2, iterations=200)
 ```
 
 This tool should be used primarily for visualizations. If you're serious about performance, you should consider implementing Markov chains using tools like Numpy. 
