@@ -36,7 +36,7 @@ markov = MarkovModel(states=states, start_state=s1)
 # turn model into GIF
 make_gif(markov, basename='reincarnation', state_changes_per_second=2, iterations=200)
 ```
-Add animations to a markov model by changing ```python markov.MarkovModel.model_actions_on_transition, markov.MarkovModel.state_actions_on_transition, markov.MarkovModel.transition_actions_on_transition``` methods. Note that animations are calculated from ```python animation_attrs``` dictionaries which are associated with the ```\python markov.MarkovModel, markov.State, markov.Transition``` objects.
+Add animations to a markov model by changing ```markov.MarkovModel.model_actions_on_transition, markov.MarkovModel.state_actions_on_transition, markov.MarkovModel.transition_actions_on_transition``` methods. Note that animations are calculated from ```animation_attrs``` dictionaries which are associated with the ``` markov.MarkovModel, markov.State, markov.Transition``` objects.
 
 
 ## Description
