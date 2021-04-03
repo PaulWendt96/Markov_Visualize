@@ -36,6 +36,19 @@ markov = MarkovModel(states=states, start_state=s1)
 # turn model into GIF
 make_gif(markov, basename='reincarnation', state_changes_per_second=2, iterations=200)
 ```
+
+You can also make a GIF from a model defined in JSON. 
+
+```python
+from parse_markov_json import json_to_gif
+import json
+
+with open("markov_json.json", "r") as markov_model_json:
+    markov_json = json.load(markov_model_json)
+    
+json_to_gif(markov_json, "gif_generated_from_json", 5, 10)
+```
+
 Add animations to a markov model by changing ```markov.MarkovModel.model_actions_on_transition, markov.MarkovModel.state_actions_on_transition, markov.MarkovModel.transition_actions_on_transition``` methods. Note that animations are calculated from ```animation_attrs``` dictionaries which are associated with the ``` markov.MarkovModel, markov.State, markov.Transition``` objects.
 
 
