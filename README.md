@@ -60,7 +60,7 @@ Despite their conceptual simplicity, Markov Models have an enormous variety of r
 ## What are the primary limitations of Markov_Visualize?
 This tool should be used primarily for visualizations. If you're serious about performance, you should consider implementing Markov chains using tools like Numpy. 
 
-The current markov.py does not allow Markov Chains to have explicit transitions to themselves (this probability is calculated implicitly). This prevents nodes from having an arrow to itself in GIFs. See [GraphvizAnim](https://github.com/mapio/GraphvizAnim) if you'd like to make GIFs with nodes that point to themselves.
+The current ```markov.py``` does not allow Markov Chains to have explicit transitions to themselves (this probability is calculated implicitly). This prevents nodes from having an arrow to itself in GIFs. See [GraphvizAnim](https://github.com/mapio/GraphvizAnim) if you'd like to make GIFs with nodes that point to themselves.
 
 It is currently difficult to change transitions in the model while it is running. This is because ```make_gif``` makes a copy of the ```MarkovModel``` object before it starts iterating. Copying the provided markov model before turning it into a GIF ensures that the original model is not iterated over without the author explicitly telling it to iterate. There is, however, nothing stopping you from commenting out this copying if you wish to change the model animations dynamically while it is running.
 
