@@ -224,6 +224,7 @@ class MarkovModel():
     def _parse_state_attrs(self, state):
         ''' whitespace is not significant in DOT, so it is ok if we insert an extra space when no animation attrs present'''
         format_string = ' '.join(['[{}]'.format(self._parse_attr(k, v)) for k, v in state.animation_attrs.items()])
+
         # cleanup animation attribute dictionary
         state.animation_attrs = {}
         return format_string
@@ -313,7 +314,7 @@ def make_gif(markov_graph, basename='giffy', state_changes_per_second=1, iterati
     tempdir_name = 'sampledir' # TODO: need better naming heuristic
     delay = (1/state_changes_per_second)*100
     padding = int(log(iterations, 10)) + 1
-    with make_temporary_directory(os.getcwd(), tempdir_name, remove_if_already_exists=False) as path:
+    with make_temporary_directory(os.getcwd(), tempdir_name, remove_if_already_exists=True) as path:
         graph_saver = save_file_gv(deepcopy(markov_graph))
         file_paths = []
         for i, _ in enumerate(range(iterations)):

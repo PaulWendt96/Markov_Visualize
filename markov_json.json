@@ -1,0 +1,36 @@
+{
+"model":
+{  "markov": {
+    "state_Active": {
+      "Disabled": 0.5,
+      "Dead": 0.02
+    },
+    "state_Disabled": {
+      "Active": 0.5,
+      "Dead": 0.03
+    },
+    "state_Dead": {
+      "Dirt": 0.80,
+      "Plant": 0.07,
+      "Cheetah": 0.10,
+      "Man": 0.02
+    },
+    "state_Dirt": {
+      "Dead": 0.5
+    },
+    "state_Plant": {
+      "Dead": 0.5
+    },
+    "state_Cheetah": {
+      "Dead": 0.01,
+      "Dirt": 0.2,
+      "Plant": 0.3,
+      "Man": 0.2
+    },
+    "state_Man": {
+      "Active": 0.5
+    }
+  },
+  "start": "A"
+}
+}
